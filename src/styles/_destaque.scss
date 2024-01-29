@@ -1,0 +1,95 @@
+@use 'variaveis';
+
+.destaque {
+    padding: 0;
+
+    &__container {
+        background-image: url("../images/destaque.jpg");
+        background-size: cover;
+        min-height:80vh;
+        background-color: rgba(13, 15, 143, 0.658);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+        background-position: 60%;
+
+        @media (max-width: 1023px) {
+            display: flex;       
+            flex-direction: column;
+            flex-wrap: wrap;     
+            justify-content: space-evenly;
+            min-height:45vh;
+            background-position: 60%;   
+        }
+
+        @media (max-width: 768px) {
+            display: flex;       
+            flex-direction: column;
+            flex-wrap: wrap;     
+            justify-content: space-evenly;
+            min-height:80vh;
+            background-position: 60%;
+        }
+    }
+
+    &__item__text{
+        color: variaveis.$corFontPrincipal;
+        text-align: center;
+        font-size: 32px;
+        width: 80%;
+
+        @media (max-width: 1023px) {
+            font-size: 26px;    
+        }
+
+        @media (max-width: 768px) {
+            font-size: 22px;    
+        }
+    }
+}
+
+.assistir__container {
+    width: 400px;
+    padding-bottom: 35px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(variaveis.$colorBody, .7);
+    border: solid 1px rgba(variaveis.$fundoPrincipal, .7);
+
+    & h1 {
+        padding: 35px;
+    }
+    
+    @media (max-width: 1023px) {
+        width: 60%;
+        border: solid 1px rgba(variaveis.$fundoPrincipal, .7);
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+        border: solid 1px rgba(variaveis.$fundoPrincipal, .7);
+    }
+
+    
+}
+
+.assistir__list {
+    display: grid;
+    gap:22px 0;
+    max-width: 80%;
+    grid-template-columns:repeat(2,1fr);
+    text-align: center;
+    margin: 0 auto;
+    
+    &__item {
+        text-align: center;
+    }
+
+    &__item img {
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+header {
+    background-color: variaveis.$fundoPrincipal;
+    color: variaveis.$corFontPrincipal;
+    
+    align-items: center;
+    padding: 16px 0;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1;
+
+}
+
+.header__container {
+    padding:.5vw 5.6vw;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header__links__item {
+    
+    a {
+        color: variaveis.$corFontPrincipal;
+        text-decoration: none;
+    }
+}
+
+.botao__assistir {
+    text-align: center;
+    padding: 16px;
+    width: 50%;
+    background-color: rgba(variaveis.$colorBody, .7);
+    border: variaveis.$corFontPrincipal solid 2px;
+    border-radius: 8px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+
+    &:hover {
+
+        background-color:  variaveis.$fundoPrincipal;
+    }
+
+    &--hidden {
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity .5s ease;
+    }
+
+    &--show {
+        opacity: auto;
+        transition: opacity .5s ease;
+    }
+}

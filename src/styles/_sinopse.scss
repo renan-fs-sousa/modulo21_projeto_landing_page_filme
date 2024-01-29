@@ -1,0 +1,26 @@
+.sinopse__container {
+    display: grid;
+    gap: 22px;
+    grid-template-columns:repeat(2,1fr);
+    padding:1vw 5.6vw;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1023px) {
+        display: block;
+        margin: -20px auto;
+
+        h2 {
+            margin-top: 40px;
+        }        
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+        margin: -20px auto;
+
+        h2 {
+            margin-top: 40px;
+        }
+    }
+}
